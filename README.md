@@ -3,4 +3,4 @@
 ```
 https://github.com/yousufislamme/menuBar.git
 ```
-[###Demo](https://yousufislamme.github.io/menuBar/)
+[**Demo](https://yousufislamme.github.io/menuBar/)
