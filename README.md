@@ -3,7 +3,4 @@
 ```
 https://github.com/yousufislamme/menuBar.git
 ```
-# visit this demo
-```
-https://yousufislamme.github.io/menuBar/
-```
+[#Demo](url)
