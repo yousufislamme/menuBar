@@ -1,94 +1,143 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-:root{
-   --bgColor : #000ED5;
-   --color: #fff;
+:root {
+  --bgColor: rgb(0, 14, 213);
+  --color: #ffffff;
+  --font: "Poppins";
 }
 h1 {
-   text-align: center;
+  text-align: center;
 }
 main {
-   width: 100%;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main .toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.header-contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .toggle {
-   position: relative;
-   width: 4rem;
-   height: 4rem;
-   background: var(--bgColor);
-   border-radius: 5px;   
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   transition: .4s ease-in-out;
-   cursor: pointer;
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background: var(--bgColor);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .toggle span {
-   position: absolute;
-   width: 45px;
-   height: 5px;
-   background: var(--color);
-   border-radius: 10px;
-   transition: .4s;
+  position: absolute;
+  width: 45px;
+  height: 5px;
+  background: var(--color);
+  border-radius: 10px;
+  transition: 0.4s;
 }
 /* Span 1 */
-.toggle span:nth-child(1){
-   transform: translateY(-13px);
-   
+.toggle span:nth-child(1) {
+  transform: translateY(-13px);
 }
 
-.toggle:hover span:nth-child(1){
-   width: 25px;
+.toggle:hover span:nth-child(1) {
+  width: 25px;
 }
 
-.toggle.active span:nth-child(1){
-   transform: rotate(45deg);
-   
-   
+.toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
 }
 
 .toggle.active:hover span:nth-child(1) {
-	transform: rotate(147deg) translateX(7px) translateY(11px);
+  transform: rotate(147deg) translateX(7px) translateY(11px);
 }
 /* Span 2 */
-.toggle span:nth-child(2){
-   transform: translateY(13px);
-   
-  
+.toggle span:nth-child(2) {
+  transform: translateY(13px);
 }
 .toggle:hover span:nth-child(2) {
-   width: 25px;
-
+  width: 25px;
 }
 .toggle.active span:nth-child(2) {
-   transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .toggle.active:hover span:nth-child(2) {
-	transform: rotate(-140deg) translateX(5px) translateY(-13px);
+  transform: rotate(-140deg) translateX(5px) translateY(-13px);
 }
 /* Span 3 */
-.toggle.active span:nth-child(3){
-   width: 0;
+.toggle.active span:nth-child(3) {
+  width: 0;
 }
 
-.toggle.active:hover span:nth-child(3){
-   width: 45px;
-   
+.toggle.active:hover span:nth-child(3) {
+  width: 45px;
 }
 
+/* Menu item box */
+main .toggle ~ .menu_items_box {
+  position: absolute;
+  top: 2rem;
+  right: 8.5rem;
+}
+.menu_items_box {
+  width: 12rem;
+  background: #ffffff;
+  padding: 2rem 1.2rem;
+  border-radius: 0.75rem;
+  box-shadow: rgba(12, 38, 46, 0.15) 0px 48px 100px 0px;
+  transform: translateY(-100px);
+  transition: 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  opacity: 0;
+}
+.menu_items_box.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.menu_items_box ul {
+  display: block;
+}
 
+.menu_items_box li {
+  line-height: 2;
+  text-align: center;
+}
 
-
-
-
-
+.menu_items_box li a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #130f40;
+  font-family: var(--font);
+}
+.home {
+  width: 70%;
+  margin: auto;
+}
+.home h1 {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--font);
+  background-color: #ff4757;
+  color: var(--color);
+  padding: 10px 25px;
+}
